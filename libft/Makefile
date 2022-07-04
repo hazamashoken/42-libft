@@ -6,7 +6,7 @@
 #    By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/22 03:49:49 by tliangso          #+#    #+#              #
-#    Updated: 2022/07/04 19:19:46 by tliangso         ###   ########.fr        #
+#    Updated: 2022/07/04 20:10:01 by tliangso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,10 +38,6 @@ all:		${NAME}
 
 ${NAME}:	${OBJS}
 			ar rc ${NAME} ${OBJS}
-
-so:
-	$(CC) -fPIC $(CFLAGS) $(SRCS)
-	gcc -shared -o libft.so $(OBJ)
 
 clean:
 			${RM} ${OBJS}
