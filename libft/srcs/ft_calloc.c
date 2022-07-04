@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/03 20:38:03 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/04 15:57:14 by tliangso         ###   ########.fr       */
+/*   Created: 2022/07/04 19:14:06 by tliangso          #+#    #+#             */
+/*   Updated: 2022/07/04 19:24:32 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void *ft_calloc(size_t nmemb, size_t size)
 {
-	size_t i;
+	void *arr;
 
-	if (!dest && !src)
+	if (!nmemb || !size)
 		return (NULL);
-	if (dest > src)
-		while (n--)
-			((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
-	else
-	{
-		i = 0;
-		while (i <n)
-		{
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-			++i;
-		}
-	}
-	return (dest);
+	arr = malloc(nmemb * size);
+	if (!arr)
+		return (NULL);
+	ft_bzero(arr, size);
+	return (arr);
 }

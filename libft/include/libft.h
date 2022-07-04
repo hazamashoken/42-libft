@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 16:43:18 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/04 19:23:48 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/04 18:47:31 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,5 @@ int ft_isalnum(int c);
 int ft_isascii(int c);
 int ft_isprint(int c);
 int ft_toupper(int c);
-int ft_tolower(int c);
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size);
-void *ft_calloc(size_t nmemb, size_t size)
 
 #endif

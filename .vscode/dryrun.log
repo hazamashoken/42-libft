@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/tliangso/42_libft'
+make: Leaving directory '/home/tliangso/42_libft'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
