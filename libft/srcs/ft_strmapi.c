@@ -1,56 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 15:06:32 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 20:08:22 by tliangso         ###   ########.fr       */
+/*   Created: 2022/07/05 20:04:03 by tliangso          #+#    #+#             */
+/*   Updated: 2022/07/05 20:11:46 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	check_size(int	n)
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	len;
-
-	if (n == 0)
-		return (1);
-	len = 0;
-	if (n < 0)
-		len++;
-	while (n > 0 )
-	{
-		len++;
-		n /= 10;
-	}
-	return (len);
-}
-
-char	*ft_itoa(int n)
-{
-	char	*str;
+	char *str;
 	size_t	i;
-	int		neg;
 
-	neg = 0;
-	str = (char *)malloc((check_size(n) + 1) * sizeof(char));
+	i = 0;
+	if (!s)
+		return (NULL);
+	str = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	if (n == 0)
-		str[0] = '0';
-	else if (n < 0)
-		neg = 1;
-	i = 0;
-	while (n != 0)
+	while (*(s + i))
 	{
-		*(str + i++) = '0' + ft_abs(n % 10);
-		n = (n / 10);
+		*(str + i) = (*f)(i, *(s + i));
+		i++;
 	}
-	if (neg)
-		*(str +i ) = '-';
-	ft_strrev(str);
 	return (str);
 }
