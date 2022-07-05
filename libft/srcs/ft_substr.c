@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 10:59:12 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 11:59:26 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 12:05:34 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= ft_strlen(s))
 		return (malloc(0));
 	str = malloc((len + 1) * sizeof(char));
-	if (!str)
-		return (NULL);
+	// if (!str)
+	// 	return (NULL);
 	while (i < len)
 	{
 		*(str + i) = *(s + start + i);
