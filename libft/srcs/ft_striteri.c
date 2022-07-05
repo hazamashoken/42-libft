@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 20:15:25 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 20:18:46 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 20:19:06 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,9 @@ void ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	if (!s)
 		return ;
-	str = malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (!str)
-		return ;
 	while (*(s + i))
 	{
 		(*f)(i, (s + i));
 		i++;
 	}
-	*(str + i) = '\0';
 }
