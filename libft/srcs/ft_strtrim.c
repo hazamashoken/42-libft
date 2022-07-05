@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:08:04 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 13:40:07 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:44:10 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ size_t check_back(char const *s1, char const *set)
 {
 	size_t	i;
 
-	i = strlen(s1) - 1;
-	while (check_charset(*(s1 + i), set) && *(s1 + i))
+	i = ft_strlen(s1) - 1;
+	while (check_charset(*(s1 + i), set) && i > 0)
 		i--;
 	return (i);
 }
