@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 20:20:59 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 20:23:33 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 20:24:20 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void ft_putendl_fd(char *s, int fd)
 		return;
 	while (*(s + i))
 		ft_putchar_fd(*(s + i++), fd);
-	ft_putchar_fd("\n", fd);
+	ft_putchar_fd('\n', fd);
 }
