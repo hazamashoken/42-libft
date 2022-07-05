@@ -6,34 +6,28 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 22:49:19 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 12:53:47 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:05:26 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(int size, char **strs, char *sep)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		len;
-	char	*res;
+	size_t	i;
+	size_t	k;
+	char *str;
 
-	if (size == 0)
-		return (malloc(sizeof(char)));
-	len = (size - 1) * (ft_strlen(sep) - 1);
-	i = -1;
-	while (++i < size)
-		len += (ft_strlen(strs[i]) - 1);
-	res = (char *)malloc(len + 1);
-	if (!res)
-		return (0);
-	*res = '\0';
-	i = -1;
-	while (i++ + 1 < size)
-	{
-		ft_strcat(res, strs[i]);
-		if (i + 1 < size)
-			ft_strcat(res, sep);
-	}
-	return (res);
+	k = 0;
+	str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (*(s1 + i))
+		*(str + k++) = *(s1 + i++);
+	i = 0;
+	while (*(s2 + i))
+		*(str + k++) = *(s2 + i++);
+	*(str + k) = '\0';
+	return (str);
 }
