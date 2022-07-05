@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 16:43:18 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/04 20:07:45 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 11:33:18 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
-#include <sys/_types.h>
 
 void *ft_memset(void *str, int c, size_t n);
 void ft_bzero(void *s, size_t n);
@@ -46,5 +45,6 @@ int ft_toupper(int c);
 int ft_tolower(int c);
 unsigned int ft_strlcpy(char *dest, char *src, unsigned int size);
 void *ft_calloc(size_t nmemb, size_t size);
+char *ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
