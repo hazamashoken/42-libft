@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 16:43:18 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 17:44:34 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 19:16:06 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 void *ft_memset(void *str, int c, size_t n);
 void ft_bzero(void *s, size_t n);
@@ -56,6 +57,8 @@ void ft_putnbr_fd(int nb, int fd);
 void ft_putstr(char *str);
 void ft_putstr_fd(char *s, int fd);
 char *ft_itoa(int n);
-
+char *ft_strrev(char *str);
+void ft_swap(int *a, int *b);
+int ft_abs(int n);
 
 #endif
