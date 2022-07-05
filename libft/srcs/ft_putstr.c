@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:27:29 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 15:28:40 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 17:12:28 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_putstr(char *str)
 
 	i = 0;
 	while (*(str + i))
-		ft_putchar(*(str + i));
+		ft_putchar(*(str + i++));
 }
