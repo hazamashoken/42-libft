@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 20:39:09 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 20:40:42 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 20:42:37 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 int ft_lstsize(t_list *lst)
 {
 	size_t	i;
+	t_list	*node;
 
+	node = lst;
 	i = 0;
-	while (*lst)
+	while (node != NULL)
 	{
-		lst = lst->next;
+		node = node->next;
 		i++;
 	}
 	return (i);
