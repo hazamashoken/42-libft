@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:23:27 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 14:36:54 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 20:13:50 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ char *ft_word(const char *str, char c)
 	i = 0;
 	len_word = ft_strlen_sep(str, c);
 	word = (char *)malloc(sizeof(char) * (len_word + 1));
+	if (!word)
+		return (NULL);
 	while (i < len_word)
 	{
 		word[i] = str[i];
@@ -73,6 +75,8 @@ char **ft_split(char const *s, char c)
 	if (!s)
 		return (malloc(0));
 	strings = (char **)malloc(sizeof(char *) * (ft_count_strings(s, c) + 1));
+	if (!strings)
+		return (NULL);
 	while (*s != '\0')
 	{
 		while (*s != '\0' && ft_check_separator(*s,c))
