@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 22:30:16 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/04 20:19:57 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 10:52:08 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char *ft_strdup(const char *s)
 	size_t i;
 
 	i = 0;
-	str = malloc(sizeof(char) *	(ft_strlen(s) + 1));
+	str = (char *)malloc(sizeof(char) *	(ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
 	while (*(s + i))
