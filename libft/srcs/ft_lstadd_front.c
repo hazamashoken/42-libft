@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 20:30:41 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 20:35:19 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 20:38:18 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,6 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 		new->next = *lst;
 		*lst = new;
 	}
+	else if (new)
+		*lst = new;
 }
