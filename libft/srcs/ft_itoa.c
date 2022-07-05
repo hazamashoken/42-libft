@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:06:32 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 16:57:50 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 17:10:58 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	check_size(int	n)
 	size_t	len;
 
 	len = 0;
+	if (n < 0)
+		len++;
 	while (n > 0 )
 	{
 		len++;
@@ -34,6 +36,7 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (n >= 0 && str)
 	{
+		*--str = '\0';
 		*--str = '0' + (n % 10);
 		n /= 10;
 		while (n != 0)
@@ -44,6 +47,7 @@ char	*ft_itoa(int n)
 	}
 	else if (str)
 	{
+		*--str = '\0';
 		*--str = '0' - (n % 10);
 		n /= 10;
 		while (n != 0)
