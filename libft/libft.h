@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 16:43:18 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 11:33:18 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 12:58:04 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ int ft_tolower(int c);
 unsigned int ft_strlcpy(char *dest, char *src, unsigned int size);
 void *ft_calloc(size_t nmemb, size_t size);
 char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strjoin(int size, char **strs, char *sep);
 
 #endif
