@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 16:43:18 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 20:16:22 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 20:21:24 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ void ft_swap(int *a, int *b);
 int ft_abs(int n);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void ft_striteri(char *s, void (*f)(unsigned int, char *));
+void ft_putendl_fd(char *s, int fd);
 
 #endif
