@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:06:32 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 18:37:59 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 18:39:06 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 
-	if (n = -2147483648)
+	if (n == -2147483648)
 		return ("-2147483648");
 	str = malloc((check_size(n) + 1) * sizeof(char));
 	if (!str)
