@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 20:56:43 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 21:22:15 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 21:23:16 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst != NULL)
 	{
-		(*del)((*lst)->content);
+		(*del)(lst->content);
 		free(lst);
 	}
 }
