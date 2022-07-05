@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 09:48:44 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/04 09:51:49 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 12:53:39 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ char	*ft_strcat(char *dest, const char *src)
 		i++;
 	while (*(src + k))
 		*(dest + i++) = *(src + k++);
+	*(dest + i) = '\0';
 	return (dest);
  }
