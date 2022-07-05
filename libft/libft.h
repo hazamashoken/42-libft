@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 16:43:18 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 17:33:35 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 17:37:29 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ void ft_putchar_fd(char c, int fd);
 void ft_putnbr(int nb);
 void ft_putstr(char *str);
 char *ft_itoa(int n);
+void ft_putstr_fd(char *s, int fd);
 
 #endif
