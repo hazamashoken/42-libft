@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 15:18:20 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/04 21:21:19 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 11:34:29 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ int ft_atoi(const char *nptr)
 	long res;
 	int cutlim;
 
-	if (!nptr)
-		return (0);
 	i = 0;
 	neg = 1;
 	while ((*(nptr + i) >= 9 && *(nptr + i) <= 13) || nptr[i] == ' ')

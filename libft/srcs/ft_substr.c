@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/03 21:21:37 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 11:34:22 by tliangso         ###   ########.fr       */
+/*   Created: 2022/07/05 10:59:12 by tliangso          #+#    #+#             */
+/*   Updated: 2022/07/05 11:00:37 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(void *s, int c, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 
-	i = 0;
-	while (i < n)
-	{
-		if (*(unsigned char *)(s + i) == (unsigned char)c)
-			return (s + i);
-		i++;
-	}
-	return (NULL);
+	while ()
 }
