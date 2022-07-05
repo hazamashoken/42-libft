@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 21:00:45 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 21:15:37 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 21:16:41 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void ft_lstclear(t_list **lst, void (*del)(void *))
 	while (elem != 0)
 	{
 		list = elem->next;
-		(*del)(elem->data);
+		(*del)(elem->content);
 		free(elem);
 		elem = list;
 	}
