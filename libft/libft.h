@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 16:43:18 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 17:40:08 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 17:44:34 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
 char *ft_strtrim(char const *s1, char const *set);
 char **ft_split(char const *s, char c);
-void ft_putchar(char c);
+void ft_putchar(wchar_t c);
 void ft_putchar_fd(char c, int fd);
 void ft_putnbr(int nb);
 void ft_putnbr_fd(int nb, int fd);
