@@ -6,11 +6,12 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:08:04 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 13:45:10 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:52:55 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	check_charset(char c, char const *set)
 {
@@ -40,7 +41,7 @@ size_t check_back(char const *s1, char const *set)
 	i = ft_strlen(s1) - 1;
 	while (check_charset(*(s1 + i), set) && i > 0)
 		i--;
-	return (i);
+	return (i + 1);
 }
 
 char *ft_strtrim(char const *s1, char const *set)
@@ -63,4 +64,11 @@ char *ft_strtrim(char const *s1, char const *set)
 	}
 	*(str + i) = '\0';
 	return (str);
+}
+
+int	main(void)
+{
+	char *str = ft_strtrim("abadcadcacdaaHelloaabdcadcadca", "abcd");
+	printf("%s", str);
+	return (0);
 }
