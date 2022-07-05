@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:06:32 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 19:56:25 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 19:59:47 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,4 @@ char	*ft_itoa(int n)
 		str[i] = '-';
 	ft_strrev(str);
 	return (str);
-}
-
-int	main(void)
-{
-	printf("%s", ft_itoa(INT_MIN));
-	return (0);
 }
