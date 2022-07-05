@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 22:49:19 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 13:05:26 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 14:39:02 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char *ft_strjoin(char const *s1, char const *s2)
 	char *str;
 
 	k = 0;
+	if (!s1 || !s2)
+		return (malloc(0));
 	str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
