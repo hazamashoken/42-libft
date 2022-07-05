@@ -1,0 +1,33 @@
+ft_strcpy:     [FAILED] [OK] [FAILED] [FAILED] [FAILED] [FAILED] [OK] [OK] [OK]
+[fail]: your strcpy does not work with basic input
+[fail]: your strcpy does not support unicode ?
+[fail]: your strcpy overflow the dst !
+[fail]: your strcpy does not set \0 at the end of the string
+[fail]: your strcpy does not work with an empty string
+
+ft_strncpy:    [OK] [OK] [OK] [FAILED] [FAILED] [FAILED] [FAILED] [OK] [OK] [OK] [OK]
+[fail]: your strncpy does not work with an empty string
+[fail]: your strncpy does not work with an 0 as lenght
+[fail]: your strncpy does not fill with \0 the rest of the dest buffer
+[fail]: your strncpy put the bad number of \0 at the end of the string
+
+ft_strcat:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
+ft_strstr:     [OK] [FAILED] [FAILED] [OK] [FAILED] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
+[fail]: your strstr does not work with basic input
+[fail]: your strstr does not work with basic input
+[fail]: your strstr does not work with basic input
+[fail]: your strstr does not work with unicode string
+
+ft_putchar:    [OK] [OK] [KO]
+[KO]: your putchar does not work with unicode
+
+ft_strtrim:    [OK] [OK] [OK] [CRASH] [OK] [OK] [OK] [OK] [OK] [ ]
+[crash]: your strtrim does not work with full blank input
+
+ft_split:      [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [CRASH] [OK] [ ]
+[crash]: you did not protect your split
+
+ft_itoa:       [OK] [OK] [OK] [OK] [OK] [OK] [KO] [KO] [CRASH]
+[KO]: your itoa does not allocate the good size so the \0 test may be false
+[KO]: your itoa does not allocate the good size so the \0 test may be false
+[crash]: your itoa did not allocate memory for the int min value
