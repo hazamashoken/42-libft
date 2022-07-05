@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:08:04 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 13:44:10 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:45:10 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	check_charset(char c, char const *set)
 
 	i = 0;
 	while (*(set + i))
-		if (*(set + i) == c)
+		if (*(set + i++) == c)
 			return (1);
 	return (0);
 }
