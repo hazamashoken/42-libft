@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:06:32 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 19:23:13 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 19:56:25 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	check_size(int	n)
 {
 	size_t	len;
 
+	if (n == 0)
+		return (1);
 	len = 0;
 	if (n < 0)
 		len++;
@@ -33,18 +35,28 @@ char	*ft_itoa(int n)
 	size_t	i;
 	int		neg;
 
-	neg = 1;
-	i = 0;
-	if (n < 0)
-		neg = -1;
+	neg = 0;
 	str = malloc((check_size(n) + 1) * sizeof(char));
-	*(str + i) = '\0';
+	if (!str)
+		return (NULL);
+	if (n == 0)
+		str[0] = '0';
+	else if (n < 0)
+		neg = 1;
+	i = 0;
 	while (n != 0)
 	{
-		*(str + i++) = ft_abs(n % 10) + '0';
-		n /= 10;
+		str[i++] = '0' + ft_abs(n % 10);
+		n = (n / 10);
 	}
-	if (neg == -1)
-		*(str + i) = '-';
-	return (ft_strrev(str));
+	if (neg)
+		str[i] = '-';
+	ft_strrev(str);
+	return (str);
+}
+
+int	main(void)
+{
+	printf("%s", ft_itoa(INT_MIN));
+	return (0);
 }

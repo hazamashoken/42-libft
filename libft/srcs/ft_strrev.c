@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 18:42:38 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 19:19:58 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 19:35:44 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char *ft_strrev(char *str)
 
 	i = 0;
 	k = ft_strlen(str) - 1;
+	if (!str)
+		return (NULL);
 	while (i < k)
 	{
 		tmp = str[i];
