@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:08:04 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 13:34:01 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:40:07 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t check_front(char const *s1, char const *set)
 	size_t	i;
 
 	i = 0;
-	while (check_charset(*(s1 + i), set))
+	while (check_charset(*(s1 + i), set) && *(s1 + i))
 		i++;
 	return (i);
 }
@@ -38,7 +38,7 @@ size_t check_back(char const *s1, char const *set)
 	size_t	i;
 
 	i = strlen(s1) - 1;
-	while (check_charset(*(s1 + i), set))
+	while (check_charset(*(s1 + i), set) && *(s1 + i))
 		i--;
 	return (i);
 }
@@ -53,7 +53,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	start = check_front(s1, set);
 	end = check_back(s1, set);
-	str = malloc (end - start + 1);
+	str = malloc(end - start + 1);
 	if (!str)
 		return (NULL);
 	while (i < (end - start))
