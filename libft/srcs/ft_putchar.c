@@ -6,13 +6,13 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:25:55 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 15:26:45 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 17:43:25 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_putchar(wchar_t c)
 {
 	write(1, &c, 1);
 }
