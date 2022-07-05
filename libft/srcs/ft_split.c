@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:23:27 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 14:30:37 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 14:34:16 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int ft_check_separator(char s, char c)
 	return (s == c);
 }
 
-int ft_count_strings(char *str, char c)
+int ft_count_strings(const char *str, char c)
 {
 	int i;
 	int count;
@@ -36,7 +36,7 @@ int ft_count_strings(char *str, char c)
 	return (count);
 }
 
-int ft_strlen_sep(char *str, char c)
+int ft_strlen_sep(const char *str, char c)
 {
 	int i;
 
@@ -46,7 +46,7 @@ int ft_strlen_sep(char *str, char c)
 	return (i);
 }
 
-char *ft_word(char *str, char c)
+char *ft_word(const char *str, char c)
 {
 	int len_word;
 	int i;
