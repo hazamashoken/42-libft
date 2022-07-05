@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:08:04 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 14:04:16 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/05 14:20:26 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char *ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	if (!s1 || !set)
-		return ("");
+		return (malloc(0));
 	start = check_front(s1, set);
 	end = check_back(s1, set);
 	str = malloc(end - start + 1);
