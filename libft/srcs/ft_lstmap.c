@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 21:10:44 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 21:14:18 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/06 09:43:13 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,21 @@
 
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *result;
-	t_list *tmpresult;
-	t_list *tmplst;
+	t_list	*new_head;
+	t_list	*tmp;
 
-	if (lst == NULL || f == NULL)
-		return (NULL);
-	tmplst = f(lst);
-	if ((result = ft_lstnew(tmplst->content, tmplst->content_size)))
+	new_head = ft_lstnew((*f)(lst->content));
+	tmp = new_head;
+	while (lst->next != NULL)
 	{
-		tmpresult = result;
 		lst = lst->next;
-		while (lst != NULL)
+		tmp->next = ft_lstnew(ft_strdup((*f)(lst->content)));
+		if (tmp->next == NULL)
 		{
-			tmplst = (*f)(lst);
-			if (!(tmpresult->next = ft_lstnew(tmplst->content, tmplst->content_size)))
-				return (NULL);
-			tmpresult = tmpresult->next;
-			lst = lst->next;
+			ft_lstclear(&new_head, del);
+			return (NULL);
 		}
+		tmp = tmp->next;
 	}
-	return (result);
+	return (NULL);
 }
