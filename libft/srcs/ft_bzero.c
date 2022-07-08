@@ -6,14 +6,13 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 17:28:41 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/04 20:06:15 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/08 13:52:46 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void ft_bzero(void *s, size_t n)
 {
-	
 	ft_memset(s, 0, n);
 }

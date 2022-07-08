@@ -6,12 +6,11 @@
 /*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 15:18:20 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 14:39:34 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/08 14:00:29 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 #define cutoff 922337203685477580
 
