@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tliangso <earth78203@gmail.co>             +#+  +:+       +#+        */
+/*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:06:32 by tliangso          #+#    #+#             */
-/*   Updated: 2022/07/05 20:08:22 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/07/30 20:42:19 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,41 @@ size_t	check_size(int	n)
 		n /= 10;
 	}
 	return (len);
+}
+
+void	ft_swap(int *a, int *b)
+{
+	*a = *a ^ *b;
+	*b = *b ^ *a;
+	*a = *a ^ *b;
+}
+
+char *ft_strrev(char *str)
+{
+	size_t	i;
+	size_t	k;
+	char 	tmp;
+
+	i = 0;
+	k = ft_strlen(str) - 1;
+	if (!str)
+		return (NULL);
+	while (i < k)
+	{
+		tmp = str[i];
+		str[i] = str[k];
+		str[k] = tmp;
+		k--;
+		i++;
+	}
+	return (str);
+}
+
+int	ft_abs(int n)
+{
+	if (n < 0)
+		return (-n);
+	return (n);
 }
 
 char	*ft_itoa(int n)
